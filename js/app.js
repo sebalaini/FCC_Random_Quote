@@ -26,11 +26,16 @@ var author = [ "Oscar Wilde.",
 	"Nelson Mandela."
 ];
 
+var color = ["#b2dfee", "#6dc066", "#ffd264", "#f17c67", "#7575a3", "#aa7286", "#32a2a2"];
+
 document.getElementById('text').innerHTML = quotes[0];
 document.getElementById('author').innerHTML = author[0];
+document.body.style.backgroundColor = color[0];
 
 function newQuote() {
 	var randomNumber = Math.floor(Math.random() * (quotes.length));
+	var randomColor = Math.floor(Math.random() * (color.length));
 	document.getElementById('text').innerHTML = quotes[randomNumber];
 	document.getElementById('author').innerHTML = author[quotes.indexOf(quotes[randomNumber])];
+	document.body.style.backgroundColor = color[randomColor];	
 };
