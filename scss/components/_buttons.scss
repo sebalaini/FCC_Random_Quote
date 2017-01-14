@@ -7,7 +7,7 @@ BUTTONS
   border: none;
   border-radius: 3px;
   color: #fff;
-  background-color: #333;
+  background-color: #26292e;
   outline: none;
   font-size: 0.85em;
   padding: 8px 18px 6px 18px;
@@ -17,9 +17,9 @@ BUTTONS
 }
 
 .button:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
     
-#new-quote {
+#new_quote {
   float: right;
 }
