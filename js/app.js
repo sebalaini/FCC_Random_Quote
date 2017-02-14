@@ -26,17 +26,21 @@ var author = [ "Oscar Wilde.",
 	"Nelson Mandela."
 ];
 
-
-var color = ["#b2dfee", "#6dc066", "#ffd264", "#f17c67", "#7575a3", "#aa7286", "#32a2a2"];
-
 $("#text").html(quotes[0]);
 $("#author").html(author[0]);
-document.body.style.backgroundColor = color[0];
 
 $("#new_quote").on( "click", function () {
+	
 	var randomNumber = Math.floor(Math.random() * (quotes.length));
-	var randomColor = Math.floor(Math.random() * (color.length));
-		$("#text").html(quotes[randomNumber]).fadeOut("400").fadeIn("400");
-		$("#author").html(author[quotes.indexOf(quotes[randomNumber])]).fadeOut("400").fadeIn("400");
-		$(document.body).css("background-color", color[randomColor]);
+	var Rgb = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+		
+		$("#text").fadeOut(300, function(){
+			$("#text").html(quotes[randomNumber]).fadeIn(400);
+		});
+		
+		$("#author").fadeOut(300, function(){
+			$("#author").html(author[quotes.indexOf(quotes[randomNumber])]).fadeIn(400);
+		});
+
+		$(document.body).css("background", Rgb);
 });
