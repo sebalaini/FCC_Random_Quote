@@ -29,15 +29,15 @@ var author = [ "Oscar Wilde.",
 $("#text").html(quotes[0]);
 $("#author").html(author[0]);
 
-$("#new_quote").on( "click", function () {
-	
+$("#new-quote").on( "click", function () {
+
 	var randomNumber = Math.floor(Math.random() * (quotes.length));
 	var Rgb = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
-		
+
 		$("#text").fadeOut(300, function(){
 			$("#text").html(quotes[randomNumber]).fadeIn(400);
 		});
-		
+
 		$("#author").fadeOut(300, function(){
 			$("#author").html(author[quotes.indexOf(quotes[randomNumber])]).fadeIn(400);
 		});
